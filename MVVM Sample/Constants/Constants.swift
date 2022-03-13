@@ -6,7 +6,8 @@
 //
 
 import Foundation
+import CoreGraphics
 
 let questionSeconds = 30
 let numberOfQuestions = 15
-let borderWidth = 3.0
+let borderWidth : CGFloat = 3.0

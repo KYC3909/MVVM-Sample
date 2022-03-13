@@ -68,7 +68,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="j3Q-JB-dcw">
-                                <rect key="frame" x="0.0" y="44" width="414" height="788"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="744"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="0.0" reuseIdentifier="QuizCell" id="Gey-bN-MtG" customClass="QuizCell" customModule="MVVM_Sample" customModuleProvider="target">
@@ -172,7 +172,7 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZnX-zV-1Vr">
-                                <rect key="frame" x="0.0" y="842" width="414" height="64"/>
+                                <rect key="frame" x="0.0" y="798" width="414" height="64"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Que: 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8FY-hO-XjP">
                                         <rect key="frame" x="20" y="17.5" width="65.5" height="29"/>
@@ -218,7 +218,7 @@
                             <constraint firstItem="ZnX-zV-1Vr" firstAttribute="top" secondItem="j3Q-JB-dcw" secondAttribute="bottom" constant="10" id="dLY-qH-yT5"/>
                             <constraint firstItem="Zhy-Da-5tp" firstAttribute="trailing" secondItem="j3Q-JB-dcw" secondAttribute="trailing" id="j5y-hn-qaD"/>
                             <constraint firstItem="ZnX-zV-1Vr" firstAttribute="leading" secondItem="Zhy-Da-5tp" secondAttribute="leading" id="jOT-nG-v4e"/>
-                            <constraint firstItem="Zhy-Da-5tp" firstAttribute="bottom" secondItem="ZnX-zV-1Vr" secondAttribute="bottom" constant="-44" id="pEg-eI-kBm"/>
+                            <constraint firstItem="Zhy-Da-5tp" firstAttribute="bottom" secondItem="ZnX-zV-1Vr" secondAttribute="bottom" id="pEg-eI-kBm"/>
                         </constraints>
                     </view>
                     <connections>
