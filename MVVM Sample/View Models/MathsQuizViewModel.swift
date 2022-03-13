@@ -16,9 +16,6 @@ final class MathsQuizViewModel {
     var currentIndex = 0
     var numberOfSeconds = questionSeconds
 
-    enum Cell {
-        case quizCell(MathsQuizCellViewModel)
-    }
     
     private(set) var cells: [Cell] = []
 
@@ -31,7 +28,23 @@ final class MathsQuizViewModel {
         coordinator?.didFinish()
     }
     func showQuizResultsScreen() {
-        coordinator?.showQuizResultsScreen()
+        coordinator?.showQuizResultsScreen(cells)
+    }
+    func showNextQuestion() {
+        // Reset with seconds
+        numberOfSeconds = questionSeconds
+        increaseIndexPointerBy1()
+        
+        if currentIndexPointer() == cells.count {
+            stopTimer()
+            showQuizResultsScreen()
+            return
+        }
+        
+        // Update Table
+        onUpdate()
+        startTimer()
+        onTimerUpdate?("Que: \(currentIndexPointer() + 1)", numberOfSeconds.description)
     }
 }
 //MARK: - Create Cell related Methods
@@ -101,19 +114,7 @@ extension MathsQuizViewModel {
     @objc func timerCalled(_ timer: Timer) {
         numberOfSeconds -= 1
         if numberOfSeconds <= 0 {
-                
-            numberOfSeconds = questionSeconds
-            increaseIndexPointerBy1()
-            
-            if currentIndexPointer() == cells.count {
-                stopTimer()
-                showQuizResultsScreen()
-                return
-            }
-            
-            onUpdate()
-            startTimer()
-            onTimerUpdate?("Que: \(currentIndexPointer() + 1)", numberOfSeconds.description)
+            showNextQuestion()
         }else {
             onTimerUpdate?("Que: \(currentIndexPointer() + 1)", numberOfSeconds.description)
         }

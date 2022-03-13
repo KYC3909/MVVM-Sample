@@ -10,8 +10,8 @@ import UIKit
 final class QuizCell: UITableViewCell {
     // MARK: - IVars
     static let id = "QuizCell"
-
-
+    weak var viewModel: MathsQuizCellViewModel?
+    var onOptionClicked = {}
 
     // MARK: - @IBOutlet Properties
     @IBOutlet weak var lblFirstArg: UILabel!
@@ -28,12 +28,13 @@ final class QuizCell: UITableViewCell {
     }
 
     func update(with viewModel: MathsQuizCellViewModel) {
-       let btnArray = [btnAns1, btnAns2, btnAns3, btnAns4]
+        self.viewModel = viewModel
+        let btnArray = [btnAns1, btnAns2, btnAns3, btnAns4]
         let ansArray = viewModel.getAnsArray()
         btnArray.enumerated().forEach {
             $0.element?.setTitle(ansArray[$0.offset], for: .normal)
         }
-
+        
         lblFirstArg.text = viewModel.firstNumber
         lblSecondArg.text = viewModel.secondNumber
         lblOperator.text = viewModel.operatorDescription
@@ -43,19 +44,7 @@ final class QuizCell: UITableViewCell {
 // MARK: - IBAction
 extension QuizCell {
     @IBAction func btnOptionSelected(_ sender: UIButton) {
-                
-        switch sender.tag {
-        case 100:
-            break
-        case 101:
-            break
-        case 102:
-            break
-        case 103:
-            break
-        
-        
-        default: break
-        }
+        self.viewModel?.pickedAnswer(sender.titleLabel?.text ?? "--")
+        self.onOptionClicked()
     }
 }

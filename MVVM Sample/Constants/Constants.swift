@@ -7,6 +7,6 @@
 
 import Foundation
 
-let questionSeconds = 4
-let numberOfQuestions = 1
+let questionSeconds = 30
+let numberOfQuestions = 15
 let borderWidth = 3.0

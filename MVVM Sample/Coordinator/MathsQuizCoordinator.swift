@@ -25,8 +25,8 @@ final class MathsQuizCoordinator: Coordinator {
         navigationController.pushViewController(mathsQuizViewController, animated: true)
     }
     
-    func showQuizResultsScreen() {
-        let quizResultsCoordinator = QuizResultsCoordinator(navigationController: navigationController)
+    func showQuizResultsScreen(_ cells : [Cell]) {
+        let quizResultsCoordinator = QuizResultsCoordinator(navigationController: navigationController, cells: cells)
         quizResultsCoordinator.parentCoordinator = self
         childCoordinators.append(quizResultsCoordinator)
         quizResultsCoordinator.start()

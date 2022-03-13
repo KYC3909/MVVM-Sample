@@ -22,4 +22,12 @@ enum OperatorSign: Int {
 
 enum SelectedAnswer: Int {
     case notSelected = -1, wrong = 0, correct = 1
+    
+    var description: String {
+        switch self {
+        case .notSelected:      return "Not Selected"
+        case .wrong:            return "Wrong"
+        case .correct:          return "Right"
+        }
+    }
 }

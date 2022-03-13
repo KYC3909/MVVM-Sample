@@ -29,6 +29,8 @@
 		3B9BFA4127DE068300A992D2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9BFA4027DE068300A992D2 /* Constants.swift */; };
 		3B9BFA4527DE120100A992D2 /* MathsQuizCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9BFA4427DE120100A992D2 /* MathsQuizCellViewModel.swift */; };
 		3B9BFA4827DE139A00A992D2 /* QuizCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9BFA4727DE139A00A992D2 /* QuizCell.swift */; };
+		3B9BFA4A27DE519700A992D2 /* CellTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9BFA4927DE519700A992D2 /* CellTypes.swift */; };
+		3B9BFA4C27DE554F00A992D2 /* QuizResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9BFA4B27DE554F00A992D2 /* QuizResultsCell.swift */; };
 		3BD78BB327DDE159005A9FFC /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD78BB227DDE159005A9FFC /* HomeCoordinator.swift */; };
 		3BD78BB627DDE214005A9FFC /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD78BB527DDE214005A9FFC /* UIViewController+Extensions.swift */; };
 		3BD78BB927DDE31B005A9FFC /* StoryBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD78BB827DDE31B005A9FFC /* StoryBoard.swift */; };
@@ -84,6 +86,8 @@
 		3B9BFA4027DE068300A992D2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3B9BFA4427DE120100A992D2 /* MathsQuizCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathsQuizCellViewModel.swift; sourceTree = "<group>"; };
 		3B9BFA4727DE139A00A992D2 /* QuizCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCell.swift; sourceTree = "<group>"; };
+		3B9BFA4927DE519700A992D2 /* CellTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTypes.swift; sourceTree = "<group>"; };
+		3B9BFA4B27DE554F00A992D2 /* QuizResultsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResultsCell.swift; sourceTree = "<group>"; };
 		3BD78BB227DDE159005A9FFC /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		3BD78BB527DDE214005A9FFC /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		3BD78BB827DDE31B005A9FFC /* StoryBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoard.swift; sourceTree = "<group>"; };
@@ -236,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				3B9BFA4727DE139A00A992D2 /* QuizCell.swift */,
+				3B9BFA4B27DE554F00A992D2 /* QuizResultsCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -256,6 +261,7 @@
 			children = (
 				3BD78BB827DDE31B005A9FFC /* StoryBoard.swift */,
 				3B9BFA3727DE029000A992D2 /* OperatorSign.swift */,
+				3B9BFA4927DE519700A992D2 /* CellTypes.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -412,9 +418,11 @@
 				3BD78BBB27DDE365005A9FFC /* UIStoryboard+Extensions.swift in Sources */,
 				3B9BFA2B27DDEE7E00A992D2 /* MathsQuizCoordinator.swift in Sources */,
 				1EDE00AB27DB1CFE00856A21 /* AppDelegate.swift in Sources */,
+				3B9BFA4A27DE519700A992D2 /* CellTypes.swift in Sources */,
 				3B9BFA3627DE000F00A992D2 /* ArithmeticHelper.swift in Sources */,
 				3B9BFA4527DE120100A992D2 /* MathsQuizCellViewModel.swift in Sources */,
 				3BD78BB327DDE159005A9FFC /* HomeCoordinator.swift in Sources */,
+				3B9BFA4C27DE554F00A992D2 /* QuizResultsCell.swift in Sources */,
 				3B9BFA3E27DE064100A992D2 /* Arithmetic.swift in Sources */,
 				3BD78BB627DDE214005A9FFC /* UIViewController+Extensions.swift in Sources */,
 				3BD78BC327DDE853005A9FFC /* UIColor+Extensions.swift in Sources */,

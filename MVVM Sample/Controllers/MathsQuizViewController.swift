@@ -22,13 +22,11 @@ class MathsQuizViewController: UIViewController {
 extension MathsQuizViewController {
     override func viewDidLoad() { super.viewDidLoad()
         setupNavigationView()   // Navigation View
+        setTexts()              // Setup Texts
         
+        // Table Update
         mathsQuizVM.onUpdate = { [weak self] in
             self?.tableView.reloadData()
-        }
-        mathsQuizVM.onTimerUpdate = { [weak self] (currentQueNo, seconds) in
-            self?.lblQueNo.text = currentQueNo
-            self?.lblTimer.text = seconds
         }
         
         mathsQuizVM.viewDidLoad()
@@ -36,12 +34,17 @@ extension MathsQuizViewController {
     override func viewDidDisappear(_ animated: Bool) { super.viewDidDisappear(animated)
         mathsQuizVM.viewDidDisappear()
     }
+    
 }
 // MARK: - Setup View
 extension MathsQuizViewController {
 
     // Assign Texts
     private func setTexts() {
+        mathsQuizVM.onTimerUpdate = { [weak self] (currentQueNo, seconds) in
+            self?.lblQueNo.text = currentQueNo
+            self?.lblTimer.text = seconds
+        }
     }
     
     // Navigation View
@@ -61,6 +64,9 @@ extension MathsQuizViewController: UITableViewDataSource, UITableViewDelegate {
         case .quizCell(let mathsQuizCellViewModel):
             let cell = tableView.dequeueReusableCell(withIdentifier: QuizCell.id, for: indexPath) as! QuizCell
             cell.update(with: mathsQuizCellViewModel)
+            cell.onOptionClicked = { [weak self] in
+                self?.mathsQuizVM.showNextQuestion()
+            }
             cell.alpha = 0
             return cell
         }
